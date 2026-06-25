@@ -1,0 +1,435 @@
+/* ============================================
+   DOCUMENT REQUEST PAGE STYLES
+   ============================================ */
+
+/* Greeting Section */
+.greetingSection {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.greeting {
+    font-size: 2.5rem;
+    color: #0147AE;
+    font-weight: 300;
+}
+
+/* Content Layout */
+.contentSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 3rem;
+    min-height: 500px;
+}
+
+/* Left Panel */
+.leftPanel {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    color: #0147AE;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.sectionSubtitle {
+    color: #888;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.requiredMark {
+    color: #c62828;
+}
+
+.requirementsPanel {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: #f0f6ff;
+    border: 1px solid #c5d9f7;
+    border-radius: 8px;
+}
+
+.requirementsTitle {
+    font-weight: 600;
+    color: #0147AE;
+    font-size: 0.88rem;
+    margin-bottom: 0.35rem;
+}
+
+.requirementsList {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.documentOptions {
+    border: 2px solid #5c9cff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Document Items */
+.documentItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0.5rem;
+    border-radius: 8px;
+    gap: 1rem;
+    background-color: white;
+}
+
+.documentItem:hover {
+    background: #f0f8ff;
+}
+
+.documentItem:last-child {
+    margin-bottom: 0;
+}
+
+.docCheckboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+/* Custom Checkbox */
+.realCheckbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5c9cff;
+    border-radius: 4px;
+    margin-right: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.realCheckbox:checked {
+    background: #0147AE;
+}
+
+.realCheckbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.documentLabel {
+    color: #0147AE;
+    font-size: 0.95rem;
+    user-select: none;
+}
+
+/* Quantity Input */
+.docQuantity {
+    width: 60px;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.docQuantity:disabled {
+    background-color: #f9f9f9;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.docQuantity:enabled:hover {
+    border-color: #1976d2;
+}
+
+/* Confirm Button */
+.confirmBtn {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 0.8rem 3rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+.confirmBtn:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+}
+
+/* Right Panel — Preview */
+.rightPanel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.previewContainer {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.previewContainer:hover {
+    transform: translateY(-5px);
+}
+
+.previewContent {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.previewPlaceholder {
+    color: #ccc;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.documentPreview {
+    display: none;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.documentPreview.active {
+    display: block;
+}
+
+.previewImageWrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.documentImage {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.documentImage:hover {
+    transform: scale(1.02);
+}
+
+.previewWatermark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-52deg);
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+    font-family: var(--font-family);
+    font-size: clamp(1.7rem, 5.6vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.72);
+    text-transform: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+/* Pagination Dots */
+.pageIndicator {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.indicatorDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    padding: 0;
+}
+
+.indicatorDot.activeDot {
+    background: #5c9cff;
+    transform: scale(1.2);
+}
+
+.indicatorDot:hover {
+    background: #5c9cff;
+    opacity: 0.7;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+    background: none;
+    border: none;
+}
+
+.closeModal:hover {
+    color: #333;
+}
+
+/* Accessibility */
+.confirmBtn:focus,
+.documentItem:focus,
+.closeModal:focus,
+.realCheckbox:focus {
+    outline: 3px solid #ff9800;
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .greetingSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .contentSection {
+        flex-direction: column;
+    }
+
+    .leftPanel,
+    .rightPanel {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .previewContainer {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .modalContent {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .confirmBtn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.05rem;
+    }
+
+    .documentItem {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .realCheckbox {
+        width: 24px;
+        height: 24px;
+    }
+
+    .documentLabel {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .greeting {
+        font-size: 1.7rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.2rem;
+    }
+
+    .sectionSubtitle {
+        font-size: 0.9rem;
+    }
+
+    .previewPlaceholder {
+        font-size: 1rem;
+    }
+
+    .indicatorDot {
+        width: 10px;
+        height: 10px;
+    }
+}

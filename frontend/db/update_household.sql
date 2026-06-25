@@ -1,0 +1,2 @@
+ALTER TABLE residents
+ADD COLUMN IF NOT EXISTS household TEXT DEFAULT '';

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1772396172337,
+    "name": "Barangay Clearance",
+    "preview": "/images/Barangay Clearance.jpg",
+    "file": "/documents/Barangay Clearance.docx",
+    "dateModified": "2026-03-01T20:44:45.101Z",
+    "dateUploaded": "2026-03-01T20:16:12.336Z"
+  },
+  {
+    "id": 1772396210743,
+    "name": "Barangay Certificate for Solo Parents",
+    "preview": "/images/Barangay Certificate for Solo Parent.jpg",
+    "file": "/documents/Certificate for Solo Parents.docx",
+    "dateModified": "2026-03-01T20:16:50.743Z",
+    "dateUploaded": "2026-03-01T20:16:50.743Z"
+  },
+  {
+    "id": 1772396254517,
+    "name": "Barangay Certificate for Motorized Banca",
+    "preview": "/images/Barangay Certificate for Motorized Banca.jpg",
+    "file": "/documents/Certificate for Motorized Banca.docx",
+    "dateModified": "2026-03-01T20:17:34.517Z",
+    "dateUploaded": "2026-03-01T20:17:34.517Z"
+  },
+  {
+    "id": 1772396284619,
+    "name": "Barangay Certificate of Indigency",
+    "preview": "/images/Certificate of Indigency.jpg",
+    "file": "/documents/Certificate of Indigency.docx",
+    "dateModified": "2026-03-01T20:18:04.619Z",
+    "dateUploaded": "2026-03-01T20:18:04.619Z"
+  },
+  {
+    "id": 1772396308903,
+    "name": "Barangay certificate of Residency",
+    "preview": "/images/Certificate of Residency.jpg",
+    "file": "/documents/Certificate of Residency.docx",
+    "dateModified": "2026-03-01T20:18:28.903Z",
+    "dateUploaded": "2026-03-01T20:18:28.903Z"
+  }
+]

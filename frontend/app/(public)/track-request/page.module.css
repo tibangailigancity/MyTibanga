@@ -1,0 +1,645 @@
+/* ============================================
+   TRACK REQUEST PAGE STYLES
+   ============================================ */
+
+/* Welcome Section */
+.welcomeSection {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+}
+
+.welcomeTitle {
+    font-size: 2.5rem;
+    color: #0147AE;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Search Card */
+.searchCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.searchTitle {
+    color: #0147AE;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.searchSubtitle {
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.searchForm {
+    display: flex;
+    gap: 12px;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+    border-color: #0147AE;
+}
+
+.searchBtn {
+    background: #0147AE;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.searchBtn:hover {
+    background: #013a8e;
+}
+
+.searchBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.errorBox {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Result Card */
+.resultCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.resultHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.resultTitle {
+    color: #0147AE;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.resultRequestNo {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-family: 'Courier New', monospace;
+}
+
+/* Status Timeline */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: calc(1rem + 20px);
+    right: calc(1rem + 20px);
+    height: 3px;
+    background: #e5e7eb;
+    z-index: 0;
+}
+
+.timelineStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.stepCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #9ca3af;
+    font-weight: 700;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+    border: 3px solid #e5e7eb;
+}
+
+.stepLabel {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+/* Completed step */
+.stepCompleted .stepCircle {
+    background: #0147AE;
+    border-color: #0147AE;
+    color: white;
+}
+
+.stepCompleted .stepLabel {
+    color: #0147AE;
+    font-weight: 600;
+}
+
+/* Active step */
+.stepActive .stepCircle {
+    background: white;
+    border-color: #0147AE;
+    color: #0147AE;
+    box-shadow: 0 0 0 4px rgba(1, 71, 174, 0.15);
+    animation: pulse 2s infinite;
+}
+
+.stepActive .stepLabel {
+    color: #0147AE;
+    font-weight: 700;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(1, 71, 174, 0.15); }
+    50%      { box-shadow: 0 0 0 8px rgba(1, 71, 174, 0.08); }
+}
+
+/* Declined state */
+.stepDeclined .stepCircle {
+    background: #dc2626;
+    border-color: #dc2626;
+    color: white;
+}
+
+.stepDeclined .stepLabel {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+/* Progress line fill */
+.timelineProgress {
+    position: absolute;
+    top: 20px;
+    left: calc(1rem + 20px);
+    height: 3px;
+    background: #0147AE;
+    z-index: 0;
+    transition: width 0.5s ease;
+}
+
+/* Details Section */
+.detailsSection {
+    margin-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+}
+
+.detailsTitle {
+    color: #0147AE;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.detailField {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detailLabel {
+    color: #6b7280;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detailValue {
+    color: #333;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Documents List */
+.docList {
+    margin-top: 1rem;
+}
+
+.docItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.docName {
+    color: #333;
+    font-weight: 500;
+}
+
+.docQty {
+    color: #6b7280;
+    font-size: 0.85rem;
+    margin-left: 6px;
+}
+
+.docPrice {
+    color: #333;
+    font-weight: 600;
+}
+
+.docTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px;
+    font-weight: 700;
+    color: #0147AE;
+    border-top: 2px solid #0147AE;
+    margin-top: 4px;
+}
+
+/* Status Badge */
+.statusBadge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* Admin Notification */
+.adminNotesBox {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 1rem;
+    color: #e65100;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.adminNotesIcon {
+    font-size: 1.3rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Rejection Reason */
+.rejectionBox {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 1rem;
+    color: #991b1b;
+    font-size: 0.9rem;
+}
+
+/* Nav Buttons */
+.navButtons {
+    display: flex;
+    gap: 12px;
+    margin-top: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.requestBtn,
+.homeBtn {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.requestBtn {
+    background: #0147AE;
+    color: white;
+    border: 2px solid #0147AE;
+}
+
+.requestBtn:hover {
+    background: #013a8e;
+}
+
+.homeBtn {
+    background: white;
+    color: #0147AE;
+    border: 2px solid #0147AE;
+}
+
+.homeBtn:hover {
+    background: #e3f2fd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcomeTitle {
+        font-size: 2rem;
+    }
+
+    .searchCard,
+    .resultCard {
+        margin: 0 1rem 2rem;
+        padding: 1.5rem;
+    }
+
+    .searchForm {
+        flex-direction: column;
+    }
+
+    .detailsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding: 0 0.25rem;
+    }
+
+    .stepLabel {
+        font-size: 0.7rem;
+    }
+
+    .stepCircle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.95rem;
+    }
+
+    .navButtons {
+        margin: 2rem 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcomeTitle {
+        font-size: 1.5rem;
+    }
+
+    .searchTitle {
+        font-size: 1.3rem;
+    }
+
+    .stepLabel {
+        font-size: 0.65rem;
+    }
+
+    .stepCircle {
+        width: 30px;
+        height: 30px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   MY REQUESTS HISTORY
+   ============================================ */
+
+.historyCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 2rem auto 0;
+    animation: fadeIn 0.3s ease;
+}
+
+.historyTitle {
+    color: #0147AE;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.historySubtitle {
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.historyLoading,
+.historyEmpty {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem 0;
+    font-size: 0.95rem;
+}
+
+.historyTableWrap {
+    overflow-x: auto;
+}
+
+.historyTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.historyTable thead th {
+    text-align: left;
+    padding: 10px 14px;
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.historyTable tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background 0.15s;
+}
+
+.historyTable tbody tr:hover {
+    background: #f9fafb;
+}
+
+.historyTable tbody td {
+    padding: 12px 14px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.historyReqNo {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.viewBtn {
+    background: #0147AE;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    white-space: nowrap;
+    min-width: 74px;
+}
+
+.viewBtn:hover {
+    background: #013a8e;
+}
+
+.deleteBtn {
+    margin-left: 0;
+    margin-top: 6px;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    white-space: nowrap;
+    min-width: 74px;
+}
+
+.deleteBtn:hover {
+    background: #fee2e2;
+}
+
+.deleteBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.historyTable tbody td:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Responsive — history */
+@media (max-width: 768px) {
+    .historyCard {
+        margin: 2rem 1rem 0;
+        padding: 1.5rem;
+    }
+
+    .historyTable {
+        font-size: 0.82rem;
+    }
+
+    .historyTable thead th,
+    .historyTable tbody td {
+        padding: 10px 8px;
+    }
+
+    .deleteBtn {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+}
+
+/* Notification indicator in My Requests table */
+.hasNotification td {
+    background: #fffde7 !important;
+    border-color: #ffe082 !important;
+}
+
+.hasNotification td:first-child {
+    border-left: 3px solid #e65100 !important;
+}
+
+.notifIndicator {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 0.9rem;
+    color: #e65100;
+    cursor: help;
+    animation: pulseWarn 2s ease-in-out infinite;
+}
+
+@keyframes pulseWarn {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+

@@ -1,0 +1,25 @@
+.timeDisplay {
+    text-align: right;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeLabel {
+    color: #0147AE;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.timeValue {
+    color: #245eb6;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .timeDisplay {
+        text-align: center;
+    }
+}

@@ -1,0 +1,73 @@
+/* Admin Toolbar — WordPress-style top bar */
+.adminBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    background: #1e1e2e;
+    height: 32px;
+    font-size: 0.78rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.barInner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 16px;
+}
+
+.barLeft {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.barRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.barLink {
+    color: #c5c8d0;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: color 0.15s ease, background 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.barLink:hover {
+    color: #72b5f7;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dashIcon {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.barGreeting {
+    color: #c5c8d0;
+    white-space: nowrap;
+}
+
+/* Responsive — hide labels on small screens */
+@media (max-width: 600px) {
+    .barLink {
+        padding: 4px 6px;
+        font-size: 0.72rem;
+    }
+
+    .barGreeting {
+        font-size: 0.72rem;
+    }
+}

@@ -1,0 +1,280 @@
+/* Edit Homepage — consistent with System Settings styles */
+
+.editor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.pageTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.pageSubtitle {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 4px 0 0;
+}
+
+/* ==================== SECTION CARD ==================== */
+.sectionCard {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sectionIcon {
+    font-size: 1.2rem;
+}
+
+.sectionTitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* ==================== FORMS ==================== */
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.formLabel {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e0e5eb;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #333;
+    background: #f8fafc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #0147AE;
+    box-shadow: 0 0 0 3px rgba(1, 71, 174, 0.1);
+}
+
+.formTextarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e0e5eb;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #333;
+    background: #f8fafc;
+    min-height: 100px;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.formTextarea:focus {
+    outline: none;
+    border-color: #0147AE;
+    box-shadow: 0 0 0 3px rgba(1, 71, 174, 0.1);
+}
+
+.formHint {
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 4px;
+}
+
+/* ==================== CARDS GRID ==================== */
+.cardsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.cardItem {
+    background: #f8fafc;
+    border: 1.5px solid #e0e5eb;
+    border-radius: 12px;
+    padding: 18px;
+    transition: border-color 0.2s ease;
+}
+
+.cardItem:focus-within {
+    border-color: #0147AE;
+}
+
+.cardItemHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.cardNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0147AE, #2979ff);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.cardItemTitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* ==================== BUTTONS ==================== */
+.btnRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
+    position: sticky;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(245, 247, 250, 1) 60%, rgba(245, 247, 250, 0));
+    padding: 16px 0;
+    z-index: 10;
+}
+
+.btnPrimary {
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #0147AE, #2979ff);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnPrimary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(1, 71, 174, 0.3);
+}
+
+.btnPrimary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btnSecondary {
+    padding: 12px 24px;
+    background: #f0f3f7;
+    color: #555;
+    border: 1.5px solid #e0e5eb;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s ease;
+}
+
+.btnSecondary:hover {
+    background: #e4e8ee;
+}
+
+/* ==================== TOAST ==================== */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: toastIn 0.3s ease;
+}
+
+.toastSuccess {
+    background: linear-gradient(135deg, #388e3c, #4caf50);
+}
+
+.toastError {
+    background: linear-gradient(135deg, #c62828, #e53935);
+}
+
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== LOADING ==================== */
+.loadingState {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 1rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 700px) {
+    .sectionCard {
+        padding: 18px;
+    }
+
+    .pageHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .btnRow {
+        flex-direction: column;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        text-align: center;
+    }
+}

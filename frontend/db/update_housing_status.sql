@@ -1,0 +1,2 @@
+ALTER TABLE residents
+ADD COLUMN IF NOT EXISTS housing_status TEXT DEFAULT '';

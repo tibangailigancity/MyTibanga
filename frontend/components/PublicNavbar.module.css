@@ -1,0 +1,241 @@
+/* Public Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logoMy {
+    color: #ff9800;
+}
+
+.logoTibanga {
+    color: #0147AE;
+}
+
+.logoPortal {
+    color: #ff9800;
+}
+
+/* Center nav menu */
+.navMenu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navMenu ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #0147AE;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+.navLink:hover,
+.navLink.active,
+.active {
+    color: #ff9800;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ff9800;
+}
+
+/* Login button */
+.loginBtn {
+    background: #0147AE;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.loginBtn:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
+}
+
+.loginBtn:focus {
+    outline: 2px solid #ff9800;
+    outline-offset: 2px;
+}
+
+/* Auth section - logged in */
+.authSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dropdownBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f44336;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    padding: 0 5px;
+    margin-left: 8px;
+}
+
+.userDropdown {
+    position: relative;
+}
+
+.userNameBtn {
+    background: transparent;
+    border: none;
+    color: #0147AE;
+    padding: 0.5rem 0.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.userNameBtn:hover {
+    color: #ff9800;
+}
+
+.dropdownArrow {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdownArrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 190px;
+    overflow: hidden;
+    z-index: 1001;
+    animation: dropdownSlide 0.2s ease;
+}
+
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownItem {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    background: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdownItem:last-child {
+    color: #e53935;
+    border-top: 1px solid #f0f0f0;
+}
+
+.dropdownItem:hover {
+    background: #f5f5f5;
+}
+
+.dropdownItem:last-child:hover {
+    background: #fef2f2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navContainer {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .navMenu {
+        position: static;
+        transform: none;
+    }
+
+    .navMenu ul {
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .navbar {
+        background: white;
+        border-bottom: 2px solid #0147AE;
+    }
+}

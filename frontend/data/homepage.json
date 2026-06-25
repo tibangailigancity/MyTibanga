@@ -1,0 +1,46 @@
+{
+    "welcome": {
+        "subtitle": "The Official Website of Barangay Tibanga, Iligan City",
+        "newHereText": "**New Here?** Go to our Barangay Office and have yourself registered"
+    },
+    "about": {
+        "heading": "About Barangay Tibanga",
+        "description": "Barangay Tibanga is a progressive community in Iligan City, committed to serving our residents with excellence and transparency. We strive to provide accessible services and maintain open communication with all community members.",
+        "cards": [
+            {
+                "title": "Community Services",
+                "description": "We offer various community programs and services to enhance the quality of life for all residents."
+            },
+            {
+                "title": "Local Government",
+                "description": "Transparent and accountable local governance dedicated to serving the people of Tibanga."
+            },
+            {
+                "title": "Public Safety",
+                "description": "Maintaining peace and order through community cooperation and effective safety measures."
+            }
+        ]
+    },
+    "services": {
+        "heading": "Our Services",
+        "description": "We provide various document and administrative services to make government processes more accessible to our community.",
+        "cards": [
+            {
+                "title": "Document Requests",
+                "description": "Barangay clearance, certificates of residency, indigency certificates, and other official documents."
+            },
+            {
+                "title": "Business Permits",
+                "description": "Assistance with barangay business permit applications and renewals for local entrepreneurs."
+            },
+            {
+                "title": "Community Records",
+                "description": "Maintenance of resident records, birth registrations, and other vital community documentation."
+            },
+            {
+                "title": "Mediation Services",
+                "description": "Peaceful resolution of community disputes through our mediation and conflict resolution programs."
+            }
+        ]
+    }
+}

@@ -1,0 +1,281 @@
+.rcdReport {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.toolbarFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex: 1;
+    align-items: flex-end;
+}
+
+.toolbarActions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filterField,
+.filterFieldWide {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filterFieldWide {
+    min-width: 220px;
+    flex: 1;
+}
+
+.label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.selectInput,
+.dateInput,
+.yearInput,
+.textInput {
+    border: 1px solid #d7dde5;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.yearInput {
+    width: 110px;
+}
+
+.textInput {
+    min-width: 220px;
+}
+
+.exportBtn {
+    border: 1px solid #cfe0fb;
+    background: #f3f8ff;
+    color: #0147AE;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.exportBtn:hover {
+    background: #0147AE;
+    color: #fff;
+    border-color: #0147AE;
+}
+
+.printBtn {
+    border: 1px solid #ffcc80;
+    background: #fff8e1;
+    color: #e65100;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.printBtn:hover {
+    background: #ff9800;
+    color: #fff;
+    border-color: #ff9800;
+}
+
+.hint,
+.manualHint {
+    margin: 0;
+    font-size: 0.86rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.periodLabel {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #444;
+}
+
+.loading,
+.emptyRow {
+    text-align: center;
+    color: #777;
+    padding: 24px 12px;
+}
+
+.tableWrap {
+    overflow-x: auto;
+    border: 1px solid #e3e8ef;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+}
+
+.table th,
+.table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #edf1f5;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #f7f9fc;
+    font-weight: 600;
+    color: #444;
+}
+
+.table tfoot td {
+    border-bottom: none;
+    background: #eef3fb;
+    font-weight: 700;
+}
+
+.daySubtotalRow td {
+    background: #f7f9fc;
+    font-weight: 600;
+    border-bottom: 2px solid #e3e8ef;
+}
+
+.num {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.totalLabel {
+    text-align: right;
+}
+
+.badgePortal,
+.badgeManual {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.badgePortal {
+    background: #e8f1ff;
+    color: #0147AE;
+}
+
+.badgeManual {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.deleteBtn {
+    border: none;
+    background: transparent;
+    color: #c62828;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.manualSection {
+    border: 1px solid #e3e8ef;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fcfdff;
+}
+
+.manualTitle {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    color: #222;
+}
+
+.presetRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.presetLabel {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.presetBtn {
+    border: 1px solid #d7dde5;
+    background: #fff;
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.presetBtn:hover {
+    border-color: #0147AE;
+    color: #0147AE;
+}
+
+.manualForm {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(110px, 1fr)) auto;
+    gap: 8px;
+}
+
+.input {
+    border: 1px solid #d7dde5;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 0.86rem;
+}
+
+.addBtn {
+    border: none;
+    background: #0147AE;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.addBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .manualForm {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .addBtn {
+        grid-column: 1 / -1;
+    }
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Dela Cruz",
+    "username": "admin",
+    "email": "admin@tibanga.gov.ph",
+    "password": "$2b$10$ZHtHuOEa0Iar8xAV.R5oKON94rbBnygo9gTRA.3Ef1GAENLvujtSK",
+    "role": "admin",
+    "superAdmin": true,
+    "permissions": [
+      "fees",
+      "announcements",
+      "puroks",
+      "admin-management"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Maria Santos",
+    "username": "maria.santos",
+    "email": "resident@tibanga.gov.ph",
+    "password": "$2b$10$7FP87c.sL39JSVlyUVgOdOTygIIFSKtuKgYbo/FSBhLjN.dYcSB9G",
+    "role": "resident"
+  },
+  {
+    "id": 3,
+    "name": "test test",
+    "username": "test.test",
+    "email": "test@gmail.com",
+    "password": "1234",
+    "role": "resident"
+  }
+]

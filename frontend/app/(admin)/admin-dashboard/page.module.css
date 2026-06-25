@@ -1,0 +1,1277 @@
+/* Dashboard Page Styles */
+
+.dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==================== STAT CARDS ==================== */
+.statCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.statCard {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCardClickable {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+}
+
+.statCardClickable:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.statCardClickable:focus-visible {
+    outline: 2px solid #0147AE;
+    outline-offset: 2px;
+}
+
+.statCardClickable:active {
+    transform: translateY(-2px);
+}
+
+.statNumber {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0147AE;
+    line-height: 1;
+}
+
+.pendingNumber {
+    color: #ff9800;
+}
+
+.validationNumber {
+    color: #2196f3;
+}
+
+.residentsNumber {
+    color: #0147AE;
+}
+
+.statLabel {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.statHint {
+    font-size: 0.78rem;
+    color: #0147AE;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.statCardClickable:hover .statHint,
+.statCardClickable:focus-visible .statHint {
+    opacity: 1;
+}
+
+/* ==================== SECTIONS ==================== */
+.section {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.sectionTitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0147AE;
+    margin: 0 0 20px;
+}
+
+/* ==================== STATUS TABS ==================== */
+.statusTabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.statusTab {
+    padding: 8px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.statusTab:hover {
+    background: white;
+    border-color: #999;
+}
+
+.activeTab {
+    background: white;
+    border-color: #0147AE;
+    color: #0147AE;
+}
+
+/* ==================== FILTER BAR ==================== */
+.filterBar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 10px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.documentSelect {
+    min-width: 220px;
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.9);
+    color: #444;
+    transition: border-color 0.2s;
+}
+
+.documentSelect:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+/* ==================== TABLE ==================== */
+.tableContainer {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+.table thead th {
+    text-align: left;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 12px 16px;
+    white-space: nowrap;
+}
+
+.table tbody tr {
+    transition: transform 0.2s;
+}
+
+.table tbody tr:hover {
+    transform: scale(1.005);
+}
+
+.table tbody td {
+    background: #f8f9fb;
+    padding: 14px 12px;
+    font-size: 0.88rem;
+    color: #444;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody td:first-child {
+    border-left: 1px solid #eee;
+    border-radius: 10px 0 0 10px;
+}
+
+.table tbody td:last-child {
+    border-right: 1px solid #eee;
+    border-radius: 0 10px 10px 0;
+}
+
+.nameCell {
+    font-weight: 600;
+    color: #222;
+    white-space: nowrap;
+}
+
+.dateCell {
+    white-space: nowrap;
+    color: #666;
+}
+
+.requestNo {
+    color: #0147AE;
+    font-weight: 600;
+}
+
+.emptyRow {
+    text-align: center;
+    color: #999;
+    padding: 48px 16px !important;
+    font-style: italic;
+}
+
+/* ==================== STATUS BADGE ==================== */
+.statusBadge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+
+/* ==================== ACTION BUTTONS ==================== */
+.actionCell {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.viewBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e3f2fd;
+    color: #0147AE;
+    transition: all 0.2s;
+}
+
+.viewBtn:hover {
+    background: #0147AE;
+    color: white;
+}
+
+.approveBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e8f5e9;
+    color: #2e7d32;
+    transition: all 0.2s;
+}
+
+.approveBtn:hover {
+    background: #2e7d32;
+    color: white;
+}
+
+.declineBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #ffebee;
+    color: #c62828;
+    transition: all 0.2s;
+}
+
+.declineBtn:hover {
+    background: #c62828;
+    color: white;
+}
+
+.printBtn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e8eaf6;
+    color: #283593;
+    transition: all 0.2s;
+}
+
+.printBtn:hover {
+    background: #283593;
+    color: white;
+}
+
+.releaseBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e8f5e9;
+    color: #2e7d32;
+    transition: all 0.2s;
+}
+
+.releaseBtn:hover {
+    background: #2e7d32;
+    color: white;
+}
+
+.completeBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e3f2fd;
+    color: #0147AE;
+    transition: all 0.2s;
+}
+
+.completeBtn:hover {
+    background: #0147AE;
+    color: white;
+}
+
+.approveBtn:disabled,
+.declineBtn:disabled,
+.releaseBtn:disabled,
+.completeBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==================== MODAL ==================== */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modalBody {
+    padding: 32px;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.modalClose {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modalClose:hover {
+    color: #333;
+}
+
+.modalTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0147AE;
+    margin: 0 0 24px;
+}
+
+.modalGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.modalField {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.modalLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.modalValue {
+    font-size: 0.92rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* OR: below 2-col summary, above documents — does not span inside modalGrid */
+/* Align with .modalGrid gap (16px): ~16px from last summary row to OR label */
+.modalOrStrip {
+    margin-top: 8px;
+    padding-top: 7px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modalOrHint {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.45;
+}
+
+.modalOrOverride {
+    margin-top: 2px;
+}
+
+.orOverrideToggle {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #0147AE;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.orOverrideToggle:hover {
+    color: #003580;
+}
+
+.modalOrInputRow {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.modalOrInput {
+    min-width: 0;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #c5d4e8;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    box-sizing: border-box;
+}
+
+.modalOrInput:focus {
+    outline: none;
+    border-color: #0147AE;
+    box-shadow: 0 0 0 2px rgba(1, 71, 174, 0.12);
+}
+
+.saveOrBtn {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border: 1px solid #0147AE;
+    background: #fff;
+    color: #0147AE;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.saveOrBtn:hover {
+    background: #f0f5ff;
+}
+
+.saveOrBtn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background: #f7f9fc;
+}
+
+.modalPurposeEditRow {
+    align-items: start;
+}
+
+.modalPurposeInput {
+    resize: vertical;
+    min-height: 56px;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
+@media (max-width: 420px) {
+    .modalOrInputRow {
+        grid-template-columns: 1fr;
+    }
+
+    .saveOrBtn {
+        justify-self: start;
+    }
+}
+
+.modalActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+/* ==================== DOCUMENT LIST IN MODAL ==================== */
+.docListSection {
+    margin-top: 24px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.docListTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0147AE;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin: 0 0 12px;
+}
+
+.docList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.docListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.docListName {
+    flex: 1;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.docListQty {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #666;
+    margin: 0 16px;
+}
+
+.docListPrice {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0147AE;
+}
+
+.docListTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #222;
+    border-top: 2px solid #eee;
+    margin-top: 8px;
+}
+
+.rejectionBox {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #ffebee;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #c62828;
+}
+
+/* ==================== PURPOSE ==================== */
+.purposeSection {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.purposeTextarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    color: #333;
+    resize: vertical;
+    min-height: 72px;
+}
+
+.purposeTextarea:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.purposeHint {
+    margin: 6px 0 0;
+    font-size: 0.8rem;
+    color: #4d668a;
+    line-height: 1.4;
+}
+
+.purposeActions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.savePurposeBtn {
+    padding: 8px 16px;
+    background: #0147AE;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.savePurposeBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.purposeDisplay {
+    margin: 0;
+    padding: 10px 14px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+/* ==================== REQUIREMENTS CHECKLIST ==================== */
+.requirementsSection {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.requirementItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 0.88rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.requirementItem:hover {
+    background: #f0f3f7;
+}
+
+.requirementCheckbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #0147AE;
+    cursor: pointer;
+}
+
+/* ==================== BAR CHART ==================== */
+.chartContainer {
+    padding: 8px 0;
+}
+
+.barChart {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    height: 200px;
+    padding: 0 16px;
+}
+
+.barGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.barWrapper {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+.bar {
+    width: 48px;
+    background: #0147AE;
+    border-radius: 4px 4px 0 0;
+    min-height: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: height 0.5s ease;
+    position: relative;
+}
+
+.barValue {
+    position: absolute;
+    top: -24px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.barLabel {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Chart Legend */
+.chartLegend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f3f7;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.legendDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legendBlue {
+    background: #0147AE;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
+    .statCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================== PAGINATION ==================== */
+.paginationBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.perPageSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.perPageSelect {
+    padding: 6px 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.perPageSelect:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.pageControls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pageBtn {
+    padding: 6px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0147AE;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+    background: #0147AE;
+    color: white;
+    border-color: #0147AE;
+}
+
+.pageBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pageInfo {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .statusTabs {
+        gap: 6px;
+    }
+
+    .statusTab {
+        padding: 6px 12px;
+        font-size: 0.78rem;
+    }
+
+    .actionCell {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .modalBody {
+        padding: 24px 20px;
+    }
+
+    .modalGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .statCards {
+        grid-template-columns: 1fr;
+    }
+
+    .statCard {
+        padding: 20px;
+    }
+
+    .statNumber {
+        font-size: 2.2rem;
+    }
+
+    .barChart {
+        gap: 12px;
+    }
+
+    .bar {
+        width: 32px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+}
+
+/* ==================== DECLINE DIALOG ==================== */
+.declineDialog {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.declineDialogTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #c62828;
+    margin: 0 0 6px;
+}
+
+.declineDialogSubtitle {
+    font-size: 0.88rem;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+.declineReqList {
+    margin-bottom: 16px;
+}
+
+.declineReqLabel {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin: 0 0 8px;
+}
+
+.declineReqItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #fff5f5;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+    font-size: 0.88rem;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 6px;
+    transition: background 0.2s;
+}
+
+.declineReqItem:hover {
+    background: #fee2e2;
+}
+
+.declineReqItem input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #c62828;
+    cursor: pointer;
+}
+
+.declineNotesSection {
+    margin-bottom: 20px;
+}
+
+.declineNotesInput {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
+    margin-top: 6px;
+    box-sizing: border-box;
+}
+
+.declineNotesInput:focus {
+    outline: none;
+    border-color: #c62828;
+}
+
+.declineDialogActions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+.declineCancelBtn {
+    padding: 8px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.declineCancelBtn:hover {
+    border-color: #999;
+    color: #333;
+}
+
+.declineConfirmBtn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #c62828;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.declineConfirmBtn:hover {
+    background: #b71c1c;
+}
+
+/* ==================== NOTIFY BUTTON & DIALOG ==================== */
+.notifyBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #fff3e0;
+    color: #e65100;
+    transition: all 0.2s;
+}
+
+.notifyBtn:hover {
+    background: #e65100;
+    color: white;
+}
+
+.notifyBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.notifyDialogTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e65100;
+    margin: 0 0 6px;
+}
+
+.notifyReqItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #fff8e1;
+    border-radius: 8px;
+    border: 1px solid #ffe082;
+    font-size: 0.88rem;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 6px;
+    transition: background 0.2s;
+}
+
+.notifyReqItem:hover {
+    background: #fff3e0;
+}
+
+.notifyReqItem input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #e65100;
+    cursor: pointer;
+}
+
+.notifyConfirmBtn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #e65100;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.notifyConfirmBtn:hover {
+    background: #bf360c;
+}
+
+.expiredBtn {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 1000;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: #0147AE;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(1, 71, 174, 0.35);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expiredBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 26px rgba(1, 71, 174, 0.4);
+}
+
+.expiredModal {
+    background: #fff;
+    border-radius: 16px;
+    width: min(1000px, 95vw);
+    max-height: 84vh;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+    padding: 20px 20px 16px;
+}
+
+.expiredHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.expiredCloseBtn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 999px;
+    background: #eef3fb;
+    color: #4a5f7b;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.expiredCloseBtn:hover {
+    background: #e2eaf7;
+}
+
+.expiredTitle {
+    margin: 0;
+    color: #0147AE;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.expiredSubtitle {
+    margin: 8px 0 14px;
+    color: #667085;
+    font-size: 0.9rem;
+}
+
+.expiredEmpty {
+    margin: 14px 0 6px;
+    color: #667085;
+}
+
+.expiredTableWrap {
+    max-height: calc(84vh - 120px);
+    overflow: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.expiredTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.expiredTable th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #f7f9fc;
+    color: #4b5563;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.expiredTable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #1f2937;
+    vertical-align: top;
+}
+
+.expiredBadge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #fef3c7;
+    color: #92400e;
+}

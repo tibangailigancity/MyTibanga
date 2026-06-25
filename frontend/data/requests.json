@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "requestNo": "10142022",
+    "residentName": "Jubil Leo Ventic",
+    "documents": [
+      {
+        "name": "Barangay Clearance",
+        "quantity": 1,
+        "unitPrice": 70,
+        "total": 70
+      }
+    ],
+    "totalAmount": 70,
+    "date": "2024-12-30",
+    "status": "completed",
+    "paymentMethod": "cash",
+    "referenceNo": ""
+  },
+  {
+    "id": 2,
+    "requestNo": "10012022",
+    "residentName": "Caimerah Abdul",
+    "documents": [
+      {
+        "name": "Barangay Certificate for Motorized Banca",
+        "quantity": 1,
+        "unitPrice": 50,
+        "total": 50
+      }
+    ],
+    "totalAmount": 50,
+    "date": "2024-01-14",
+    "status": "rejected",
+    "paymentMethod": "online",
+    "referenceNo": "GCash-12345",
+    "rejectionReason": "Incomplete requirements"
+  },
+  {
+    "id": 3,
+    "requestNo": "09282022",
+    "residentName": "Luis Quilantang",
+    "documents": [
+      {
+        "name": "Certificate of Indigency",
+        "quantity": 1,
+        "unitPrice": 40,
+        "total": 40
+      }
+    ],
+    "totalAmount": 40,
+    "date": "2023-06-30",
+    "status": "pending",
+    "paymentMethod": "cash",
+    "referenceNo": ""
+  },
+  {
+    "id": 4,
+    "requestNo": "08152022",
+    "residentName": "Maria Santos",
+    "documents": [
+      {
+        "name": "Certificate of Residency",
+        "quantity": 2,
+        "unitPrice": 30,
+        "total": 60
+      }
+    ],
+    "totalAmount": 60,
+    "date": "2024-11-15",
+    "status": "completed",
+    "paymentMethod": "online",
+    "referenceNo": "GCash-67890"
+  },
+  {
+    "id": 5,
+    "requestNo": "07102022",
+    "residentName": "Roberto Dimaculangan",
+    "documents": [
+      {
+        "name": "Barangay Clearance",
+        "quantity": 1,
+        "unitPrice": 70,
+        "total": 70
+      }
+    ],
+    "totalAmount": 70,
+    "date": "2024-10-10",
+    "status": "completed",
+    "paymentMethod": "cash",
+    "referenceNo": ""
+  },
+  {
+    "id": 6,
+    "requestNo": "06052022",
+    "residentName": "Maria Santos",
+    "documents": [
+      {
+        "name": "Barangay Certificate for Solo Parent",
+        "quantity": 1,
+        "unitPrice": 60,
+        "total": 60
+      }
+    ],
+    "totalAmount": 60,
+    "date": "2024-09-05",
+    "status": "completed",
+    "paymentMethod": "cash",
+    "referenceNo": ""
+  },
+  {
+    "id": 7,
+    "requestNo": "05202022",
+    "residentName": "Jubil Leo Ventic",
+    "documents": [
+      {
+        "name": "Certificate of Residency",
+        "quantity": 1,
+        "unitPrice": 30,
+        "total": 30
+      }
+    ],
+    "totalAmount": 30,
+    "date": "2024-08-20",
+    "status": "rejected",
+    "paymentMethod": "cash",
+    "referenceNo": "",
+    "rejectionReason": "Incomplete requirements"
+  },
+  {
+    "id": 1772480689827,
+    "requestNo": "030326034449",
+    "residentName": "Maria Santos",
+    "documents": [
+      {
+        "name": "Barangay Certificate for Solo Parent",
+        "quantity": 1,
+        "unitPrice": 60,
+        "total": 60
+      },
+      {
+        "name": "Certificate of Indigency",
+        "quantity": 2,
+        "unitPrice": 40,
+        "total": 80
+      },
+      {
+        "name": "Certificate of Residency",
+        "quantity": 1,
+        "unitPrice": 30,
+        "total": 30
+      }
+    ],
+    "totalAmount": 170,
+    "date": "2026-03-02T19:44:49.827Z",
+    "status": "rejected",
+    "paymentMethod": "cash",
+    "referenceNo": "",
+    "rejectionReason": "buang"
+  },
+  {
+    "id": 1772482011978,
+    "requestNo": "030326040651",
+    "residentName": "test test",
+    "documents": [
+      {
+        "name": "Barangay Certificate for Motorized Banca",
+        "quantity": 1,
+        "unitPrice": 50,
+        "total": 50
+      },
+      {
+        "name": "Barangay Certificate for Solo Parent",
+        "quantity": 1,
+        "unitPrice": 60,
+        "total": 60
+      },
+      {
+        "name": "Barangay Clearance",
+        "quantity": 1,
+        "unitPrice": 70,
+        "total": 70
+      },
+      {
+        "name": "Certificate of Residency",
+        "quantity": 1,
+        "unitPrice": 30,
+        "total": 30
+      }
+    ],
+    "totalAmount": 210,
+    "date": "2026-03-02T20:06:51.978Z",
+    "status": "rejected",
+    "paymentMethod": "cash",
+    "referenceNo": "",
+    "rejectionReason": "z"
+  },
+  {
+    "id": 1772562070399,
+    "requestNo": "030426022110",
+    "residentName": "zz zz",
+    "documents": [
+      {
+        "name": "Barangay Certificate for Solo Parent",
+        "quantity": 1,
+        "unitPrice": 60,
+        "total": 60
+      },
+      {
+        "name": "Barangay Clearance",
+        "quantity": 2,
+        "unitPrice": 70,
+        "total": 140
+      },
+      {
+        "name": "Certificate of Indigency",
+        "quantity": 1,
+        "unitPrice": 40,
+        "total": 40
+      }
+    ],
+    "totalAmount": 240,
+    "date": "2026-03-03T18:21:10.399Z",
+    "status": "approved",
+    "paymentMethod": "cash",
+    "referenceNo": ""
+  },
+  {
+    "id": 1772562855839,
+    "requestNo": "030426023415",
+    "residentName": "zz zz",
+    "documents": [
+      {
+        "name": "Barangay Certificate for Solo Parent",
+        "quantity": 1,
+        "unitPrice": 60,
+        "total": 60
+      },
+      {
+        "name": "Certificate of Indigency",
+        "quantity": 1,
+        "unitPrice": 40,
+        "total": 40
+      }
+    ],
+    "totalAmount": 100,
+    "date": "2026-03-03T18:34:15.839Z",
+    "status": "pending",
+    "paymentMethod": "cash",
+    "referenceNo": ""
+  }
+]

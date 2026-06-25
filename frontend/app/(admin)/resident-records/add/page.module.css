@@ -1,0 +1,568 @@
+/* Add New Resident Page */
+
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==================== HEADER ==================== */
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.backBtn {
+    font-size: 1.5rem;
+    color: #0147AE;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: background 0.2s;
+}
+
+.backBtn:hover {
+    background: white;
+}
+
+.pageTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #0147AE;
+    margin: 0;
+}
+
+.pageSubtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffc107;
+    margin: 10px 0 0;
+    line-height: 1.4;
+    max-width: 480px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* ==================== FORM CARD ==================== */
+.formCard {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* ==================== FORM SECTIONS ==================== */
+.formSection {
+    border: 1px solid #d0dff5;
+    border-radius: 12px;
+    padding: 24px 20px 20px;
+    margin-bottom: 24px;
+    background: transparent;
+}
+
+.sectionTitle {
+    color: #0147AE;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0 10px;
+}
+
+/* ==================== FORM ROWS ==================== */
+.formRow {
+    margin-bottom: 14px;
+}
+
+.formRowTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.formRowThree {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+/* ==================== INPUTS ==================== */
+.input,
+.select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid #c8d8ee;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: white;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.select {
+    cursor: pointer;
+    color: #999;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px 8px;
+    padding-right: 38px;
+    line-height: 1.2;
+}
+
+.select:valid {
+    color: #333;
+}
+
+.selectPlaceholder {
+    color: #999 !important;
+}
+
+/* Labeled Input (for date fields etc.) */
+.labeledInput {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.inputLabel {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #666;
+    padding-left: 4px;
+}
+
+/* ==================== FAMILY (mother/father/spouse + convert) ==================== */
+.familyFieldRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.familyFieldRow .input {
+    flex: 1 1 200px;
+    min-width: 0;
+}
+
+.deceasedLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    color: #555;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+
+.deceasedLabel input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ==================== CHILDREN FIELDS ==================== */
+.childRow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.childRow .input {
+    flex: 1;
+    min-width: 0;
+}
+
+.childAgeInput {
+    width: 5.5rem;
+    max-width: 100%;
+    flex-shrink: 0;
+    padding: 10px 12px;
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.childAgeInput::placeholder {
+    color: #9aa5b5;
+}
+
+.removeChildBtn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #ffebee;
+    color: #e53935;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.removeChildBtn:hover {
+    background: #e53935;
+    color: white;
+}
+
+.addChildBtn {
+    border: 2px dashed #c8d8ee;
+    background: transparent;
+    color: #0147AE;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.addChildBtn:hover {
+    border-color: #0147AE;
+    background: #f0f4ff;
+}
+
+/* ==================== ACCOUNT CREDENTIALS ==================== */
+.credentialsNote {
+    font-size: 0.82rem;
+    color: #666;
+    margin-bottom: 12px;
+    line-height: 1.45;
+}
+
+.portalResetBtn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background: #0147ae;
+    color: #fff;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 0.9rem;
+    align-self: flex-start;
+}
+
+.portalResetBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.portalResetBtn:hover:not(:disabled) {
+    background: #ff9800;
+}
+
+.credentialField {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.credentialLabel {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0147AE;
+    padding-left: 4px;
+}
+
+.credentialInput {
+    background: #f0f4ff !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.credentialsHint {
+    font-size: 0.78rem;
+    color: #e65100;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* ==================== UPLOAD / CAMERA AREA ==================== */
+.uploadArea {
+    display: flex;
+    justify-content: center;
+}
+
+.pictureOptions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.takePictureBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    height: 160px;
+    border: 2px solid #0147AE;
+    border-radius: 12px;
+    cursor: pointer;
+    background: rgba(1, 71, 174, 0.05);
+    color: #0147AE;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.takePictureBtn:hover {
+    background: rgba(1, 71, 174, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(1, 71, 174, 0.15);
+}
+
+.cameraIcon {
+    font-size: 2.2rem;
+}
+
+.orDivider {
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+}
+
+.uploadLabelAlt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 160px;
+    border: 2px dashed #c8d8ee;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #888;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.uploadLabelAlt:hover {
+    border-color: #0147AE;
+    color: #0147AE;
+    background: #f0f4ff;
+}
+
+/* Camera */
+.cameraContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.cameraVideo {
+    width: 360px;
+    height: 270px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #c8d8ee;
+    background: #000;
+}
+
+.cameraControls {
+    display: flex;
+    gap: 12px;
+}
+
+.captureBtn {
+    padding: 10px 28px;
+    background: #0147AE;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.captureBtn:hover {
+    background: #013a8e;
+}
+
+.cancelCameraBtn {
+    padding: 10px 24px;
+    background: transparent;
+    color: #888;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.cancelCameraBtn:hover {
+    border-color: #e53935;
+    color: #e53935;
+}
+
+.fileInput {
+    display: none;
+}
+
+.uploadedImage {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #c8d8ee;
+}
+
+.uploadedImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.removeImageBtn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(229, 57, 53, 0.9);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==================== ACTIONS ==================== */
+.formActions {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.confirmBtn {
+    background: #ff9800;
+    color: white;
+    padding: 14px 60px;
+    border: none;
+    border-radius: 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.confirmBtn:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.confirmBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.familySaveBtn {
+    padding: 10px 24px;
+    font-size: 0.88rem;
+    border-radius: 20px;
+}
+
+.linkConvertRow {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.linkConvertBtn {
+    border: 1px solid #c8d8ee;
+    background: #f7fbff;
+    color: #0147AE;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.linkConvertBtn:hover {
+    background: #eaf3ff;
+}
+
+.convertHint {
+    margin: 0 0 10px;
+    color: #6a7688;
+    font-size: 0.8rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .formCard {
+        padding: 20px 16px;
+    }
+
+    .formRowTwo,
+    .formRowThree {
+        grid-template-columns: 1fr;
+    }
+
+    .linkConvertRow {
+        grid-template-columns: 1fr;
+    }
+
+    .formSection {
+        padding: 18px 14px 14px;
+    }
+}

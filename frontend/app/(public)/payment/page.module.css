@@ -1,0 +1,453 @@
+/* ============================================
+   PAYMENT PAGE STYLES
+   ============================================ */
+
+/* Greeting */
+.greetingSection {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.greeting {
+    font-size: 2.5rem;
+    color: #0147AE;
+    font-weight: 300;
+}
+
+/* Request Card */
+.requestCard {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cardTitle {
+    text-align: center;
+    color: #0147AE;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.cardSubtitle {
+    text-align: center;
+    color: #0147AE;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+/* Item Summary */
+.itemSummary {
+    border: 2px solid #e3f2fd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.itemRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.itemRow:last-child {
+    margin-bottom: 0;
+}
+
+.totalRow {
+    font-weight: 600;
+    border-top: 1px solid #e3f2fd;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.itemName {
+    color: #0147AE;
+}
+
+.itemPrice {
+    color: #0147AE;
+    font-weight: 500;
+}
+
+.purposeField {
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.purposeField .sectionTitle {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.purposeInput {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #cfe0fb;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #1a3a5c;
+    background: #f8fbff;
+    resize: vertical;
+    min-height: 88px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.purposeInput::placeholder {
+    color: #7a94b8;
+}
+
+.purposeInput:focus {
+    outline: none;
+    border-color: #0147AE;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(1, 71, 174, 0.12);
+}
+
+.purposeHint {
+    color: #4d668a;
+    font-size: 0.8rem;
+    margin: 0 0 1.25rem;
+    line-height: 1.4;
+}
+
+/* Payment Method */
+.sectionTitle {
+    color: #0147AE;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.requiredMark {
+    color: #c62828;
+}
+
+.purposeSelect {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.65rem 0.75rem;
+    border: 2px solid #cfe0fb;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #1a3a5c;
+    background: #f8fbff;
+    margin-bottom: 0.5rem;
+}
+
+.purposeSelect:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.requirementsPanel {
+    margin: 0 0 1rem;
+    padding: 0.75rem 1rem;
+    background: #f0f6ff;
+    border: 1px solid #c5d9f7;
+    border-radius: 8px;
+}
+
+.requirementsTitle {
+    font-weight: 600;
+    color: #0147AE;
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+}
+
+.requirementsList {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #333;
+    font-size: 0.88rem;
+}
+
+.paymentOptions {
+    margin-bottom: 1.5rem;
+}
+
+.onlineTypeRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.paymentOption {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    gap: 0.75rem;
+}
+
+.paymentOption:hover {
+    background-color: #f5f5f5;
+}
+
+.paymentOption.selected {
+    background-color: #e3f2fd;
+}
+
+.paymentOption input[type="radio"] {
+    accent-color: #0147AE;
+    flex-shrink: 0;
+}
+
+.paymentOption span {
+    color: #0147AE;
+    flex: 1;
+}
+
+/* Reference Input */
+.referenceInput {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #0147AE;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.referenceInput:focus {
+    border-color: #0147AE;
+    box-shadow: 0 0 0 3px rgba(1, 71, 174, 0.1);
+}
+
+.referenceInput::placeholder {
+    color: #0147AE;
+    opacity: 0.6;
+}
+
+.referenceRow {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.uploadBtn {
+    border: none;
+    background: #e3f2fd;
+    color: #0147AE;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+.uploadBtn:hover {
+    background: #d4e8fb;
+}
+
+.uploadInput {
+    display: none;
+}
+
+.accountsWrap {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.accountCard {
+    border: 1px solid #dce9f8;
+    border-radius: 10px;
+    padding: 0.55rem 0.65rem;
+    background: #f8fbff;
+}
+
+.accountTitle {
+    font-weight: 700;
+    color: #0147AE;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.accountHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.25rem;
+}
+
+.accountIcon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.accountLine {
+    color: #1d4f99;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.copyBtn {
+    border: 1px solid #b5d0f3;
+    background: #fff;
+    color: #0147AE;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    padding: 0.18rem 0.5rem;
+    cursor: pointer;
+}
+
+.copyBtn:hover {
+    background: #f0f7ff;
+}
+
+.openGcashBtn {
+    width: 100%;
+    margin-top: 0.55rem;
+    border: none;
+    background: #0f71e8;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.openGcashBtn:hover {
+    background: #0b5fc7;
+}
+
+.gcashQrWrap {
+    margin-top: 0.65rem;
+    border: 1px solid #dce9f8;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0.65rem;
+}
+
+.gcashQrImage {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.gcashQrHint {
+    margin: 0.5rem 0 0;
+    text-align: center;
+    color: #1d4f99;
+    font-size: 0.78rem;
+}
+
+.ocrError {
+    color: #b00020;
+    margin: -1.1rem 0 0.5rem;
+    font-size: 0.82rem;
+}
+
+.ocrHint {
+    color: #4d668a;
+    margin: -0.25rem 0 1.5rem;
+    font-size: 0.8rem;
+}
+
+.cashOnlyHint {
+    color: #4d668a;
+    margin: -0.5rem 0 1rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Buttons */
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.btnCancel {
+    background-color: #0147AE;
+    color: white;
+}
+
+.btnCancel:hover {
+    background-color: #4285f4;
+    transform: translateY(-1px);
+}
+
+.btnSubmit {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btnSubmit:hover {
+    background-color: #ffb74d;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .greetingSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .requestCard {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+    }
+
+    .onlineTypeRow {
+        grid-template-columns: 1fr;
+    }
+
+    .referenceRow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

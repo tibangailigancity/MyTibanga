@@ -1,0 +1,492 @@
+/* Document Management Page */
+
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==================== HEADER ==================== */
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.backBtn {
+    font-size: 1.5rem;
+    color: #0147AE;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: background 0.2s;
+}
+
+.backBtn:hover {
+    background: white;
+}
+
+.pageTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0147AE;
+    margin: 0;
+}
+
+.pageSubtitle {
+    font-size: 0.85rem;
+    color: var(--orange-primary, #ff9800);
+    margin: 2px 0 0;
+}
+
+/* ==================== FILTER BAR ==================== */
+.filterBar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 12px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: white;
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.searchInput::placeholder {
+    color: #999;
+}
+
+/* ==================== TABLE ==================== */
+.tableSection {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.tableContainer {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table th {
+    text-align: center;
+    padding: 12px 14px;
+    color: #0147AE;
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-bottom: 2px solid #eef2f7;
+}
+
+.table th:first-child {
+    text-align: left;
+}
+
+.table td {
+    padding: 16px 14px;
+    color: #333;
+    border-bottom: 1px solid #f0f3f7;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.nameCell {
+    font-weight: 500;
+    color: #0147AE;
+    text-align: left !important;
+    min-width: 200px;
+}
+
+.actionCell {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.previewBtn,
+.downloadBtn {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.previewBtn {
+    background: #e3f2fd;
+    color: #0147AE;
+}
+
+.previewBtn:hover {
+    background: #0147AE;
+    color: white;
+}
+
+.downloadBtn {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.downloadBtn:hover {
+    background: #ff9800;
+    color: white;
+}
+
+.dateCell {
+    font-size: 0.84rem;
+    color: #666;
+    white-space: pre-line;
+    line-height: 1.4;
+}
+
+.emptyRow {
+    text-align: center !important;
+    color: #999;
+    padding: 40px 16px !important;
+    font-style: italic;
+}
+
+/* ==================== PREVIEW MODAL ==================== */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modalContent {
+    background: white;
+    border-radius: 16px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalBody {
+    padding: 32px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modalClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #f5f5f5;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+.modalClose:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.modalTitle {
+    color: #0147AE;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0 0 20px;
+}
+
+.previewImageContainer {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.previewImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: center;
+}
+
+.downloadBtnLarge {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: center;
+    text-decoration: none;
+    background: #ff9800;
+    color: white;
+    transition: all 0.2s;
+}
+
+.downloadBtnLarge:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .pageHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tableSection {
+        padding: 16px;
+    }
+
+    .actionCell {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .modalContent {
+        padding: 24px 20px;
+    }
+
+    .uploadSection {
+        flex-direction: column;
+    }
+}
+
+/* ==================== UPLOAD SECTION ==================== */
+.uploadToggleBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #0147AE;
+    color: white;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.uploadToggleBtn:hover {
+    background: #013a8c;
+}
+
+.uploadSection {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.uploadField {
+    flex: 1;
+    min-width: 200px;
+}
+
+.uploadLabel {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.uploadInput {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    background: white;
+    transition: border-color 0.2s;
+}
+
+.uploadInput:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.uploadFileInput {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    font-family: inherit;
+}
+
+.uploadSubmitBtn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #ff9800;
+    color: white;
+    transition: all 0.2s;
+    white-space: nowrap;
+    height: fit-content;
+}
+
+.uploadSubmitBtn:hover {
+    background: #f57c00;
+}
+
+.uploadSubmitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ==================== UPDATE BUTTON ==================== */
+.updateDocBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #fff3e0;
+    color: #e65100;
+    transition: all 0.2s;
+}
+
+.updateDocBtn:hover {
+    background: #e65100;
+    color: white;
+}
+
+/* ==================== DELETE BUTTON ==================== */
+.deleteDocBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #ffebee;
+    color: #c62828;
+    transition: all 0.2s;
+}
+
+.deleteDocBtn:hover {
+    background: #c62828;
+    color: white;
+}
+
+.uploadCheckboxLabel,
+.purposeToggleLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.uploadCheckboxLabel input,
+.purposeToggleLabel input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.purposeCell {
+    white-space: nowrap;
+    font-size: 0.85rem;
+}

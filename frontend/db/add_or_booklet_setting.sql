@@ -1,0 +1,3 @@
+-- OR booklet: next number to assign and last number in the current City Hall booklet.
+-- Stored in settings.key = 'orBooklet' as JSON: { "nextOr": 1, "endOr": 1000, "notes": "" }
+-- No table change required; run only if documenting migrations.

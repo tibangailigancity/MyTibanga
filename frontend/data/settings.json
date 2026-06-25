@@ -1,0 +1,43 @@
+{
+  "documentFees": [
+    { "name": "Barangay Clearance", "fee": 70 },
+    { "name": "Barangay Certificate for Solo Parents", "fee": 60 },
+    { "name": "Barangay Certificate for Motorized Banca", "fee": 50 },
+    { "name": "Barangay Certificate of Indigency", "fee": 40 },
+    { "name": "Barangay Certificate of Residency", "fee": 30 }
+  ],
+  "puroks": [
+    "Purok 1",
+    "Purok 2",
+    "Purok 3",
+    "Purok 4",
+    "Purok 5",
+    "Purok 6",
+    "Purok 7",
+    "Purok 8",
+    "Purok 9",
+    "Purok 10",
+    "Purok 11A",
+    "Purok 11B",
+    "Purok 12",
+    "Purok 13",
+    "Purok 14",
+    "Purok 15",
+    "Purok 16",
+    "Purok 17",
+    "MSU-IIT",
+    "NCS"
+  ],
+  "paymentConfig": {
+    "gcash": {
+      "accountName": "Barangay Tibanga",
+      "accountNumber": "0900 000 0000",
+      "qrImageUrl": "/images/gcash-qr.png"
+    },
+    "bank": {
+      "bankName": "LandBank",
+      "accountName": "Barangay Tibanga",
+      "accountNumber": "0000-0000-0000"
+    }
+  }
+}

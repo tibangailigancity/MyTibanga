@@ -1,0 +1,606 @@
+/* Request History Page */
+
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==================== HEADER ==================== */
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.backBtn {
+    font-size: 1.5rem;
+    color: #0147AE;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: background 0.2s;
+}
+
+.backBtn:hover {
+    background: white;
+}
+
+.pageTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0147AE;
+    margin: 0;
+}
+
+.pageSubtitle {
+    font-size: 0.85rem;
+    color: var(--orange-primary, #ff9800);
+    margin: 2px 0 0;
+}
+
+/* ==================== STATUS TABS ==================== */
+.statusTabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.statusTab {
+    padding: 8px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.statusTab:hover {
+    background: white;
+    border-color: #999;
+}
+
+.activeTab {
+    background: white;
+    border-color: #0147AE;
+    color: #0147AE;
+}
+
+/* ==================== FILTER BAR ==================== */
+.filterBar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 10px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+/* ==================== TABLE ==================== */
+.tableSection {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.tableContainer {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+.table thead th {
+    text-align: left;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 12px 16px;
+    white-space: nowrap;
+}
+
+.table tbody tr {
+    transition: transform 0.2s;
+}
+
+.table tbody tr:hover {
+    transform: scale(1.005);
+}
+
+.table tbody td {
+    background: #f8f9fb;
+    padding: 14px 12px;
+    font-size: 0.88rem;
+    color: #444;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody td:first-child {
+    border-left: 1px solid #eee;
+    border-radius: 10px 0 0 10px;
+}
+
+.table tbody td:last-child {
+    border-right: 1px solid #eee;
+    border-radius: 0 10px 10px 0;
+}
+
+.nameCell {
+    font-weight: 600;
+    color: #222;
+    white-space: nowrap;
+}
+
+.dateCell {
+    white-space: nowrap;
+    color: #666;
+}
+
+.emptyRow {
+    text-align: center;
+    color: #999;
+    padding: 48px 16px !important;
+    font-style: italic;
+}
+
+/* ==================== STATUS BADGE ==================== */
+.statusBadge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+
+/* ==================== ACTION BUTTONS ==================== */
+.actionCell {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.viewBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e3f2fd;
+    color: #0147AE;
+    transition: all 0.2s;
+}
+
+.viewBtn:hover {
+    background: #0147AE;
+    color: white;
+}
+
+.approveBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e8f5e9;
+    color: #2e7d32;
+    transition: all 0.2s;
+}
+
+.approveBtn:hover {
+    background: #2e7d32;
+    color: white;
+}
+
+.rejectBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #ffebee;
+    color: #c62828;
+    transition: all 0.2s;
+}
+
+.rejectBtn:hover {
+    background: #c62828;
+    color: white;
+}
+
+.releaseBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e8f5e9;
+    color: #2e7d32;
+    transition: all 0.2s;
+}
+
+.releaseBtn:hover {
+    background: #2e7d32;
+    color: white;
+}
+
+.completeBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: #e3f2fd;
+    color: #0147AE;
+    transition: all 0.2s;
+}
+
+.completeBtn:hover {
+    background: #0147AE;
+    color: white;
+}
+
+.approveBtn:disabled,
+.rejectBtn:disabled,
+.releaseBtn:disabled,
+.completeBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==================== MODAL ==================== */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modalBody {
+    padding: 32px;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.modalClose {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modalClose:hover {
+    color: #333;
+}
+
+.modalTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0147AE;
+    margin: 0 0 24px;
+}
+
+.modalGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.modalField {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.modalLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.modalValue {
+    font-size: 0.92rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.modalOrStrip {
+    margin-top: 8px;
+    padding-top: 7px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modalActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+/* ==================== DOCUMENT LIST IN MODAL ==================== */
+.docListSection {
+    margin-top: 24px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.docListTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0147AE;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin: 0 0 12px;
+}
+
+.docList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.docListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.docListName {
+    flex: 1;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.docListQty {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #666;
+    margin: 0 16px;
+}
+
+.docListPrice {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0147AE;
+}
+
+.docListTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #222;
+    border-top: 2px solid #eee;
+    margin-top: 8px;
+}
+
+.rejectionBox {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #ffebee;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #c62828;
+}
+
+/* ==================== PURPOSE ==================== */
+.purposeSection {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.purposeDisplay {
+    margin: 0;
+    padding: 10px 14px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+/* ==================== REQUIREMENTS LIST ==================== */
+.requirementsSection {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.requirementItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 0.88rem;
+    color: #333;
+}
+
+/* ==================== PAGINATION ==================== */
+.paginationBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.perPageSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.perPageSelect {
+    padding: 6px 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.perPageSelect:focus {
+    outline: none;
+    border-color: #0147AE;
+}
+
+.pageControls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pageBtn {
+    padding: 6px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0147AE;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+    background: #0147AE;
+    color: white;
+    border-color: #0147AE;
+}
+
+.pageBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pageInfo {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .statusTabs {
+        gap: 6px;
+    }
+
+    .statusTab {
+        padding: 6px 12px;
+        font-size: 0.78rem;
+    }
+
+    .tableSection {
+        padding: 16px;
+    }
+
+    .actionCell {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .modalBody {
+        padding: 24px 20px;
+    }
+
+    .modalGrid {
+        grid-template-columns: 1fr;
+    }
+}
